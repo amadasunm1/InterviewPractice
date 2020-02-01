@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'com.mia'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+
+    // Slf4j
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+    testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+
+    // JUnit 5
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.0")
+}
