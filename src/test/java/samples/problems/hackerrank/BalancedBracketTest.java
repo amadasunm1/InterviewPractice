@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BalancedBracketTest {
+class BalancedBracketTest {
 
     @Test
-    public void isBalanced() {
+    void isBalanced() {
         BalancedBracket balancedBracket = new BalancedBracket();
         assertEquals("NO", balancedBracket.isBalanced(""));
         assertEquals("YES", balancedBracket.isBalanced("{[()]}"));
