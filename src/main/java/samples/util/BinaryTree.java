@@ -15,10 +15,10 @@ public class BinaryTree {
     @Getter
     @Setter
     @Builder
-    private static class Node {
-        int value;
-        Node left;
-        Node right;
+    public static class Node {
+        private int value;
+        private Node left;
+        private Node right;
     }
 
     public BinaryTree() {

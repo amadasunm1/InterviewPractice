@@ -20,13 +20,13 @@ public class BalancedBracket {
                     stack.addFirst(c);
                     break;
                 case '}':
-                    if (!isMatch(stack, '{')) return "NO";
+                    if (isMatch(stack, '{')) return "NO";
                     break;
                 case ')':
-                    if (!isMatch(stack, '(')) return "NO";
+                    if (isMatch(stack, '(')) return "NO";
                     break;
                 case ']':
-                    if (!isMatch(stack, '[')) return "NO";
+                    if (isMatch(stack, '[')) return "NO";
                     break;
                 default:
                     return "NO";
@@ -40,6 +40,6 @@ public class BalancedBracket {
     }
 
     private boolean isMatch(Deque<Character> stack, Character character) {
-        return !stack.isEmpty() && stack.removeFirst().equals(character);
+        return stack.isEmpty() || !stack.removeFirst().equals(character);
     }
 }
